@@ -11,6 +11,11 @@
 #
 # Happy Coding!
 
+
+plugins:
+- serverless-offline
+
+
 service: stock-info-service # NOTE: update this with your service name
 
 # You can pin your service to only deploy with a specific Serverless version
