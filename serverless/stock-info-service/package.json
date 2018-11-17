@@ -1,5 +1,11 @@
 {
   "devDependencies": {
     "serverless-offline": "^3.31.3"
+  },
+  "dependencies": {
+    "apollo-server-lambda": "^2.2.2",
+    "dotenv": "^6.1.0",
+    "graphql": "^14.0.2",
+    "graphql-tools": "^4.0.3"
   }
 }

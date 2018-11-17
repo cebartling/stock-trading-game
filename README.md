@@ -21,6 +21,12 @@ cd ./serverless/stock-info-service
 nvm use
 yarn add --dev serverless-offline
 ```
+##### Dependencies
+
+- (https://github.com/dherault/serverless-offline)[https://github.com/dherault/serverless-offline]
+
+
+
 
 ## Vue.js web app
 
