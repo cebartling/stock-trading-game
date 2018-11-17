@@ -67,12 +67,6 @@ provider:
 #    - exclude-me-dir/**
 
 functions:
-  hello:
-    handler: handler.hello
-    events:
-    - http:
-        path: hello
-        method: get
   graphql:
     handler: graphql.handler
     events:

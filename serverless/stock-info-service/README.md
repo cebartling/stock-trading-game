@@ -5,5 +5,5 @@ A serverless GraphQL API for stock information.
 ## Running locally
 
 ```bash
-serverless offline start
+npx serverless offline start
 ```
