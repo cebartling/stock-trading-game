@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { ApolloServer, gql } = require('apollo-server-lambda');
+import { ApolloServer, gql } from 'apollo-server-lambda';
 
 // Construct a schema, using GraphQL schema language
 const typeDefs = gql`
@@ -42,4 +42,6 @@ const server = new ApolloServer({
     },
 });
 
-exports.handler = server.createHandler();
+const handler = server.createHandler();
+
+export {handler};
