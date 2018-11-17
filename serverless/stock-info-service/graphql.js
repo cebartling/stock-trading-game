@@ -1,25 +1,14 @@
+import {ApolloServer} from 'apollo-server-lambda';
+import {typeDefs} from "./graphql/schema";
+import {resolvers} from "./graphql/resolvers";
+
 require('dotenv').config();
-import { ApolloServer, gql } from 'apollo-server-lambda';
-import {hello} from './graphql/resolvers/hello';
 
-// Construct a schema, using GraphQL schema language
-const typeDefs = gql`
-  type Query {
-    hello: String
-  }
-`;
-
-// Provide resolver functions for your schema fields
-const resolvers = {
-    Query: {
-        hello,
-    },
-};
 
 const server = new ApolloServer({
     typeDefs,
     resolvers,
-    context: ({ event, context }) => ({
+    context: ({event, context}) => ({
         headers: event.headers,
         functionName: context.functionName,
         event,
