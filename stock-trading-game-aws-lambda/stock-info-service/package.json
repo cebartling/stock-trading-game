@@ -1,20 +1,20 @@
 {
   "license": "MIT",
   "devDependencies": {
-    "babel-loader": "^8.0.4",
-    "serverless-offline": "^3.31.3",
-    "serverless-webpack": "^5.2.0",
-    "webpack": "^4.26.0",
-    "webpack-node-externals": "^1.7.2"
+    "babel-loader": "8.0.4",
+    "serverless-offline": "3.31.3",
+    "serverless-webpack": "5.2.0",
+    "webpack": "4.26.0",
+    "webpack-node-externals": "1.7.2"
   },
   "dependencies": {
-    "apollo-server-lambda": "^2.2.2",
-    "axios": "^0.18.0",
-    "dotenv": "^6.1.0",
-    "graphql": "^14.0.2",
-    "graphql-tools": "^4.0.3"
+    "apollo-server-lambda": "2.2.2",
+    "axios": "0.18.0",
+    "dotenv": "6.1.0",
+    "graphql": "14.0.2",
+    "graphql-tools": "4.0.3"
   },
   "scripts": {
-    "start-offline": "npx serverless offline start"
+    "start-offline": "npx $NODE_DEBUG_OPTION serverless offline start"
   }
 }

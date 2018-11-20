@@ -2,6 +2,15 @@ import Axios from "axios";
 
 require('dotenv').config();
 
+/**
+ * Stock information GraphQL resolver.
+ *
+ * @param obj
+ * @param args
+ * @param context
+ * @param info
+ * @returns {Promise<{symbol: RemoteObject | SVGSymbolElement, companyName: string}>}
+ */
 export const stockInfo = async (obj, args, context, info) => {
     const baseUrl = `https://www.alphavantage.co/query`;
     const timeSeries = `function=TIME_SERIES_DAILY`;
