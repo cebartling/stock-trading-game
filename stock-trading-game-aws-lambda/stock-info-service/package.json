@@ -13,5 +13,8 @@
     "dotenv": "^6.1.0",
     "graphql": "^14.0.2",
     "graphql-tools": "^4.0.3"
+  },
+  "scripts": {
+    "start-offline": "npx serverless offline start"
   }
 }
