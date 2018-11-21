@@ -64,13 +64,14 @@ resource "aws_iam_role_policy_attachment" "iam_policy_stock_info_service_executi
   policy_arn = "${aws_iam_policy.stock_info_service_execution_policy.arn}"
 }
 
-resource "aws_lambda_function" "stock_info_service_function" {
-  filename         = "worker-kickstart/deployment.zip"
-  source_code_hash = "${base64sha256(file("worker-kickstart/deployment.zip"))}"
-  function_name    = "stock-info-service"
-  role             = "${aws_iam_role.stock_info_service_iam_role.arn}"
-  handler          = "graphql.handler"
-  runtime          = "nodejs8.10"
-  publish          = true
-  description      = "Stock information GraphQL API"
-}
+//resource "aws_lambda_function" "stock_info_service_function" {
+//  filename         = "worker-kickstart/deployment.zip"
+//  source_code_hash = "${base64sha256(file("worker-kickstart/deployment.zip"))}"
+//  function_name    = "stock-info-service"
+//  role             = "${aws_iam_role.stock_info_service_iam_role.arn}"
+//  handler          = "graphql.handler"
+//  runtime          = "nodejs8.10"
+//  publish          = true
+//  description      = "Stock information GraphQL API"
+//}
+
