@@ -23,7 +23,7 @@ custom:
     includeModules: true                  # Node modules configuration for packaging
 
 
-service: stock-info-service # NOTE: update this with your service name
+service: stock-info-service               # NOTE: update this with your service name
 
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
