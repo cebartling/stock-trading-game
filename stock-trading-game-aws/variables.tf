@@ -16,8 +16,12 @@ variable "aws_region" {
   description = "The AWS Region to use for provisioning all resources in this solution."
 }
 
+variable "aws_named_profile" {
+  description = "The Named Profile to use for provisioning resources for this solution."
+}
+
 variable "app_name" {
-  default = "ECSPOVRayWorker"
+  default = "StockTradingGame"
 }
 
 //variable "app_env" {
@@ -36,17 +40,17 @@ variable "sqs_queue_name" {
   default = "StockTradingGameWorkerQueue"
 }
 
-variable "lambda_function_name" {
-  default = "ecs-worker-launcher"
-}
-
-variable "ecs_task_name" {
-  default = "ECSPOVRayWorkerTask"
-}
-
-variable "bucket_permission_sid" {
-  default = "ECSPOVRayWorkerPermission"
-}
+//variable "lambda_function_name" {
+//  default = "ecs-worker-launcher"
+//}
+//
+//variable "ecs_task_name" {
+//  default = "ECSPOVRayWorkerTask"
+//}
+//
+//variable "bucket_permission_sid" {
+//  default = "ECSPOVRayWorkerPermission"
+//}
 
 variable "wait_time" {
   default = 5
@@ -56,10 +60,11 @@ variable "retries" {
   default = 5
 }
 
-variable "lambda_execution_role_name" {
-  default = "ECSPOVRayWorker-Lambda-Execution-Role"
-}
+//variable "lambda_execution_role_name" {
+//  default = "ECSPOVRayWorker-Lambda-Execution-Role"
+//}
+//
+//variable "lambda_execution_role_policy_name" {
+//  default = "AWSLambdaExecutionPolicy"
+//}
 
-variable "lambda_execution_role_policy_name" {
-  default = "AWSLambdaExecutionPolicy"
-}

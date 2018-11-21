@@ -3,9 +3,9 @@ terraform {
 }
 
 provider "aws" {
-  region = "${var.aws_region}"
-
-  // profile = "some-profile"
+  region  = "${var.aws_region}"
+  profile = "${var.aws_named_profile}"
+  version = "~> 1.46"
 }
 
 ######################################################################################################################
@@ -18,30 +18,24 @@ locals {
   ]
 }
 
-module "networking" {
-  source      = "./modules/networking"
-  environment = "production"
-  vpc_cidr    = "10.0.0.0/16"
-
-  public_subnets_cidr = [
-    "10.0.1.0/24",
-    "10.0.2.0/24",
-  ]
-
-  private_subnets_cidr = [
-    "10.0.10.0/24",
-    "10.0.20.0/24",
-  ]
-
-  region             = "${var.aws_region}"
-  availability_zones = "${local.production_availability_zones}"
-  key_name           = "production_key"
-}
-
-//module "s3" {
-//  source = "./modules/s3"
+//module "networking" {
+//  source      = "./modules/networking"
 //  environment = "production"
-//  aws_bucket = "${var.aws_bucket}"
+//  vpc_cidr    = "10.0.0.0/16"
+//
+//  public_subnets_cidr = [
+//    "10.0.1.0/24",
+//    "10.0.2.0/24",
+//  ]
+//
+//  private_subnets_cidr = [
+//    "10.0.10.0/24",
+//    "10.0.20.0/24",
+//  ]
+//
+//  region             = "${var.aws_region}"
+//  availability_zones = "${local.production_availability_zones}"
+//  key_name           = "production_key"
 //}
 
 
@@ -105,5 +99,12 @@ module "networking" {
 //  environment = "production"
 //  workflow_lambda_function_arn = "${module.worker_lambda.workflow_lambda_function_arn}"
 //  workflow_lambda_function_invoke_arn = "${module.worker_lambda.workflow_lambda_function_invoke_arn}"
+//}
+
+
+//module "s3" {
+//  source = "./modules/s3"
+//  environment = "production"
+//  aws_bucket = "${var.aws_bucket}"
 //}
 
