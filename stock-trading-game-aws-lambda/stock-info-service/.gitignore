@@ -3,6 +3,7 @@ node_modules
 jspm_packages
 .idea/
 .webpack/
+dist/
 
 # Serverless directories
 .serverless

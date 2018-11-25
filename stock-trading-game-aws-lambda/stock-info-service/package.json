@@ -1,6 +1,7 @@
 {
   "license": "MIT",
   "devDependencies": {
+    "aws-sdk": "2.361.0",
     "babel-loader": "8.0.4",
     "serverless-offline": "3.31.3",
     "serverless-webpack": "5.2.0",
@@ -15,6 +16,8 @@
     "graphql-tools": "4.0.3"
   },
   "scripts": {
-    "start-offline": "npx $NODE_DEBUG_OPTION serverless offline start"
+    "start-offline": "npx $NODE_DEBUG_OPTION serverless offline start",
+    "bundle": "npx serverless webpack --out dist",
+    "package": "npx serverless package --stage production --region us-east-1 --package dist"
   }
 }

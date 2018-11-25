@@ -8,6 +8,8 @@ provider "aws" {
   version = "~> 1.46"
 }
 
+provider "null" {}
+
 ######################################################################################################################
 ## Variables used across all modules
 ######################################################################################################################
@@ -38,12 +40,19 @@ locals {
 //  key_name           = "production_key"
 //}
 
+data "null_data_source" "stock_info_service_zip" {
+  inputs {
+    filename = "${path.module}/../stock-trading-game-aws-lambda/stock-info-service/dist/stock-info-service.zip"
+  }
+}
+
 module "stock_info_service" {
-  source      = "./modules/stock_info_service"
-  application = "${var.application}"
-  aws_region  = "${var.aws_region}"
-  environment = "${var.environment}"
-  provisioner = "${var.provisioner}"
+  source              = "./modules/stock_info_service"
+  application         = "${var.application}"
+  aws_region          = "${var.aws_region}"
+  environment         = "${var.environment}"
+  provisioner         = "${var.provisioner}"
+  deployment_zip_file = "${data.null_data_source.stock_info_service_zip.outputs.filename}"
 }
 
 //module "worker_lambda" {

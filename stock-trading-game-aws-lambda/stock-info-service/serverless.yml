@@ -13,15 +13,15 @@
 
 
 plugins:
-- serverless-offline
-- serverless-webpack
+  - serverless-webpack
+  - serverless-offline
 
 
 custom:
   webpack:
     webpackConfig: 'webpack.config.js'    # Name of webpack configuration file
     includeModules: true                  # Node modules configuration for packaging
-
+    packager: 'yarn'
 
 service: stock-info-service               # NOTE: update this with your service name
 
@@ -68,7 +68,7 @@ provider:
 
 functions:
   graphql:
-    handler: graphql.handler
+    handler: index.handler
     events:
     - http:
         path: graphql
