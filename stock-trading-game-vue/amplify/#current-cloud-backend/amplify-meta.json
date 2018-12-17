@@ -1,0 +1,32 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "stocktradinggamevue-20181217003233-authRole",
+			"UnauthRoleArn": "arn:aws:iam::842817727962:role/stocktradinggamevue-20181217003233-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::842817727962:role/stocktradinggamevue-20181217003233-authRole",
+			"Region": "us-east-1",
+			"DeploymentBucketName": "stocktradinggamevue-20181217003233-deployment",
+			"UnauthRoleName": "stocktradinggamevue-20181217003233-unauthRole",
+			"StackName": "stocktradinggamevue-20181217003233",
+			"StackId": "arn:aws:cloudformation:us-east-1:842817727962:stack/stocktradinggamevue-20181217003233/89924380-01c5-11e9-bda2-0a1b7b252ffe"
+		}
+	},
+	"api": {
+		"StockTradingGame": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"securityType": "API_KEY",
+				"GraphQLAPIIdOutput": "rv3hph6ypvdg3ojz5z6jowmyli",
+				"GraphQLAPIEndpointOutput": "https://ntf6gv3g4fb5rgak54momhyaoi.appsync-api.us-east-1.amazonaws.com/graphql",
+				"GraphQLAPIKeyOutput": "da2-gcskqzbve5cxxn6tw22t2mznha"
+			},
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/stocktradinggamevue-20181217003233-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"logicalId": "apiStockTradingGame"
+			},
+			"lastPushTimeStamp": "2018-12-17T06:39:56.401Z",
+			"lastPushDirHash": "rb3U59u2Gx4dGHpJQfNRnBkg13w="
+		}
+	}
+}

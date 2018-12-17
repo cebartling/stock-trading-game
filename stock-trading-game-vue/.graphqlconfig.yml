@@ -1,0 +1,16 @@
+projects:
+  StockTradingGame:
+    schemaPath: src/graphql/schema.json
+    includes:
+      - src/graphql/**/*.js
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: javascript
+        generatedFileName: ''
+        docsFilePath: src/graphql
+        graphQLApiId: rv3hph6ypvdg3ojz5z6jowmyli
+      endpoints:
+        prod: >-
+          https://ntf6gv3g4fb5rgak54momhyaoi.appsync-api.us-east-1.amazonaws.com/graphql

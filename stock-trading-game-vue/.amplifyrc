@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "stocktradinggamevue-20181217003233-authRole",
+            "UnauthRoleArn": "arn:aws:iam::842817727962:role/stocktradinggamevue-20181217003233-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::842817727962:role/stocktradinggamevue-20181217003233-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "stocktradinggamevue-20181217003233-deployment",
+            "UnauthRoleName": "stocktradinggamevue-20181217003233-unauthRole",
+            "StackName": "stocktradinggamevue-20181217003233",
+            "StackId": "arn:aws:cloudformation:us-east-1:842817727962:stack/stocktradinggamevue-20181217003233/89924380-01c5-11e9-bda2-0a1b7b252ffe"
+        }
+    }
+}

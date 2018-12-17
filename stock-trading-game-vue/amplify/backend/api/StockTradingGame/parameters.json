@@ -1,0 +1,7 @@
+{
+    "AppSyncApiName": "StockTradingGame",
+    "schemaGraphql": "s3://stocktradinggamevue-20181217003233-deployment/amplify-appsync-files/schema.graphql.1545028684873",
+    "ResolverBucket": "stocktradinggamevue-20181217003233-deployment",
+    "ResolverRootKey": "amplify-appsync-files",
+    "DeploymentTimestamp": "1545028684873"
+}
